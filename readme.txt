@@ -1,7 +1,7 @@
 /*   2022.05.22    */
-git架构：工作区->暂存区->版本库区
-git add [file]   添加文件进入暂存区
-git commit [file] -m    添加文件入库
+git架构：         工作区->暂存区->版本库区
+git add [file]   从工作区添加文件进入暂存区
+git commit -m    添加文件入库
 git status       当前文件状态
 git log          查看历史版本
 git reset
@@ -11,7 +11,7 @@ git reset
     穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
     要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
 git reflog       查看过去命令，用于恢复未来的版本
-git diff         查看暂存区和库区文件的不同
+git diff         查看工作区和库区文件的不同
 git reset HEAD <file> 撤销暂存区修改 
 git reset
 git checkout     丢弃工作区修改
@@ -20,8 +20,7 @@ git checkout     丢弃工作区修改
     第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。
     场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
 git rm
-git rm test.txt 相当于是删除工作目录中的test.txt文件,并把此次删除操作提交到了暂存区
-对于文件删除操作使用git restore --staged <deleted file>,
-或先使用git reset head test.txt在暂存区中将暂存区删除操作丢弃,再git checkout -- <delete file>
-111
-222
+git rm test.txt 
+    相当于是删除工作目录中的test.txt文件,并把此次删除操作提交到了暂存区,
+    对于文件删除操作使用git restore --staged <deleted file>,
+    或先使用git reset head test.txt在暂存区中将暂存区删除操作丢弃,再git checkout -- <delete file>
