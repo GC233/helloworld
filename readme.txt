@@ -24,3 +24,4 @@ git rm test.txt 相当于是删除工作目录中的test.txt文件,并把此次�
 对于文件删除操作使用git restore --staged <deleted file>,
 或先使用git reset head test.txt在暂存区中将暂存区删除操作丢弃,再git checkout -- <delete file>
 111
+222
